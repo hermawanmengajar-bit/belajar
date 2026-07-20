@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertemuan 1 - Pengenalan Dasar</title>
+    <style>
+        /* Latar belakang konsisten dengan halaman utama */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Kotak Konten Materi */
+        .container {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+            max-width: 700px;
+            width: 100%;
+            color: white;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Judul Materi Pelangi */
+        h1 {
+            font-size: 2.5rem;
+            margin-top: 0;
+            text-align: center;
+            background: linear-gradient(to right, #ffef13, #ff4e50, #f9d423);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: shineText 3s linear infinite;
+        }
+
+        @keyframes shineText {
+            to { background-position: 200% center; }
+        }
+
+        h2 {
+            color: #ffef13;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 8px;
+            margin-top: 30px;
+        }
+
+        p, li {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Tombol Kembali ke Halaman Utama */
+        .btn-back {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 25px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid white;
+            transition: all 0.3s ease;
+        }
+
+        .btn-back:hover {
+            background: white;
+            color: #e73c7e;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Materi Pertemuan 1</h1>
+        
+        <h2>1. Pengenalan Dasar</h2>
+        <p>Selamat datang di sesi pertama pembelajaraan! Pada pertemuan kali ini, kita akan membahas mengenai konsep dasar dan fondasi utama dari topik materi kita. Pemahaman yang kuat di awal akan memudahkan Anda mengikuti materi di pertemuan berikutnya.</p>
+        
+        <h2>2. Poin Pembahasan Utama</h2>
+        <ul>
+            <li><strong>Konsep Utama:</strong> Memahami definisi dasar dan ruang lingkup materi.</li>
+            <li><strong>Alat dan Lingkungan Kerja:</strong> Mempersiapkan segala kebutuhan software atau perkakas yang akan digunakan.</li>
+            <li><strong>Praktik Sederhana:</strong> Mencoba langkah pertama yang mendasar untuk membangun alur kerja yang benar.</li>
+        </ul>
+
+        <h2>3. Kesimpulan & Tugas</h2>
+        <p>Pastikan Anda sudah mencoba mempraktikkan poin ke-2 di atas secara mandiri sebelum melanjutkan ke materi Pertemuan 2.</p>
+
+        <!-- Tombol Kembali ke index.html -->
+        <center>
+            <a href="index.html" class="btn-back">⬅ Kembali ke Menu Utama</a>
+        </center>
+    </div>
+
+</body>
+</html>
