@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selamat Datang - Warna-warni & Animasi</title>
+    <title>Selamat Datang - Menu Pertemuan</title>
     <style>
         /* Latar belakang gradasi warna-warni yang bergerak animasi */
         body {
@@ -19,14 +19,13 @@
             overflow: hidden;
         }
 
-        /* Animasi pergeseran warna latar belakang */
         @keyframes gradientBG {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
 
-        /* Kotak kontainer dengan efek blur transparan (Glassmorphism) */
+        /* Kotak kontainer Glassmorphism */
         .container {
             text-align: center;
             background: rgba(255, 255, 255, 0.25);
@@ -37,9 +36,10 @@
             border: 1px solid rgba(255, 255, 255, 0.18);
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
             animation: popUp 1.2s ease-out;
+            max-width: 500px;
+            width: 90%;
         }
 
-        /* Animasi muncul untuk kotak kontainer */
         @keyframes popUp {
             0% { transform: scale(0.8); opacity: 0; }
             100% { transform: scale(1); opacity: 1; }
@@ -47,7 +47,8 @@
 
         /* Animasi teks pelangi untuk judul */
         h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
+            margin-top: 0;
             margin-bottom: 20px;
             background: linear-gradient(to right, #ffef13, #ff4e50, #f9d423, #00f2fe, #4facfe);
             background-size: 200% auto;
@@ -57,34 +58,58 @@
             animation: shineText 3s linear infinite;
         }
 
-        /* Animasi kilauan warna pada teks */
         @keyframes shineText {
             to { background-position: 200% center; }
         }
 
-        /* Teks deskripsi dengan animasi ketik sederhana */
+        /* Teks deskripsi */
         p {
             color: #ffffff;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-            white-space: nowrap;
-            overflow: hidden;
-            width: 100%;
-            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
-            border-right: 3px solid white;
-            margin: 0 auto;
+            margin-bottom: 30px;
         }
 
-        /* Animasi mengetik teks */
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
+        /* Pembungkus Menu Pertemuan */
+        .menu-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
 
-        /* Animasi kursor mengetik kedip-kedip */
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: white; }
+        /* Gaya Tombol Menu */
+        .btn-menu {
+            display: block;
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Animasi Hover (Saat Kursor Menyentuh Tombol) */
+        .btn-menu:hover {
+            transform: translateY(-3px);
+            background: linear-gradient(45deg, #ff4e50, #f9d423);
+            border-color: transparent;
+            box-shadow: 0 8px 25px rgba(255, 78, 80, 0.5);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Variasi warna hover yang berbeda tiap tombol agar lebih ramai */
+        .btn-menu:nth-child(2):hover {
+            background: linear-gradient(45deg, #00f2fe, #4facfe);
+            box-shadow: 0 8px 25px rgba(79, 172, 254, 0.5);
+        }
+
+        .btn-menu:nth-child(3):hover {
+            background: linear-gradient(45deg, #b1ea4d, #459522);
+            box-shadow: 0 8px 25px rgba(69, 149, 34, 0.5);
         }
     </style>
 </head>
@@ -92,7 +117,14 @@
 
     <div class="container">
         <h1>Selamat Datang!</h1>
-        <p>Terima kasih telah berkunjung ke website kami.</p>
+        <p>Silakan pilih menu pembelajaran di bawah ini:</p>
+        
+        <!-- Bagian Menu Pertemuan -->
+        <div class="menu-container">
+            <a href="pertemuan1.html" class="btn-menu">Pertemuan 1</a>
+            <a href="pertemuan2.html" class="btn-menu">Pertemuan 2</a>
+            <a href="pertemuan3.html" class="btn-menu">Pertemuan 3</a>
+        </div>
     </div>
 
 </body>
