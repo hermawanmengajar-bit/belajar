@@ -1,32 +1,90 @@
-<!DOCTYPE html>
+DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Selamat Datang</title>
+    <title>Selamat Datang - Warna-warni & Animasi</title>
     <style>
+        /* Latar belakang gradasi warna-warni yang bergerak animasi */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
+            overflow: hidden;
         }
+
+        /* Animasi pergeseran warna latar belakang */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Kotak kontainer dengan efek blur transparan (Glassmorphism) */
         .container {
             text-align: center;
-            background-color: white;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             padding: 50px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+            animation: popUp 1.2s ease-out;
         }
+
+        /* Animasi muncul untuk kotak kontainer */
+        @keyframes popUp {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        /* Animasi teks pelangi untuk judul */
         h1 {
-            color: #333;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #ffef13, #ff4e50, #f9d423, #00f2fe, #4facfe);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: shineText 3s linear infinite;
         }
+
+        /* Animasi kilauan warna pada teks */
+        @keyframes shineText {
+            to { background-position: 200% center; }
+        }
+
+        /* Teks deskripsi dengan animasi ketik sederhana */
         p {
-            color: #666;
-            font-size: 18px;
+            color: #ffffff;
+            font-size: 1.2rem;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+            white-space: nowrap;
+            overflow: hidden;
+            width: 100%;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+            border-right: 3px solid white;
+            margin: 0 auto;
+        }
+
+        /* Animasi mengetik teks */
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        /* Animasi kursor mengetik kedip-kedip */
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: white; }
         }
     </style>
 </head>
@@ -34,7 +92,7 @@
 
     <div class="container">
         <h1>Selamat Datang!</h1>
-        <p>Terima kasih telah mengunjungi website kami. Semoga hari Anda menyenangkan.</p>
+        <p>Terima kasih telah berkunjung ke website kami.</p>
     </div>
 
 </body>
